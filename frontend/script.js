@@ -1,12 +1,13 @@
 // Firebase Configuration
 // TODO: Replace with your actual Firebase config
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+    apiKey: "AIzaSyCHVFpFN4VJOqYOSdFO9GHhK9SexL6DmpY",
+    authDomain: "build-and-blog-25.firebaseapp.com",
+    projectId: "build-and-blog-25",
+    storageBucket: "build-and-blog-25.firebasestorage.app",
+    messagingSenderId: "481372120236",
+    appId: "1:481372120236:web:84cc39ea4d6a5b6141eb09",
+    measurementId: "G-YGD1F3YGQB"
 };
 
 // Initialize Firebase
@@ -14,7 +15,7 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
 // Backend API URL (adjust for your Cloud Run service)
-const BACKEND_URL = 'http://localhost:8080'; // Change to your Cloud Run URL in production
+const BACKEND_URL = 'https://my-backend--build-and-blog-25.us-central1.hosted.app'; // Change to your Cloud Run URL in production
 
 // Mock Product Data
 const mockProducts = [
