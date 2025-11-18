@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serverless Stylist</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Serverless Stylist</h1>
+            <p class="subtitle">Your personal shopper powered by Google Cloud AI</p>
+        </header>
+
+        <main>
+            <section class="profile-section">
+                <div class="form-group">
+                    <label for="style-profile">My Style Profile</label>
+                    <textarea 
+                        id="style-profile" 
+                        rows="4" 
+                        placeholder="e.g., vintage t-shirts, dark jeans, leather boots, minimalist aesthetic"
+                    ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="wardrobe">My Current Wardrobe</label>
+                    <textarea 
+                        id="wardrobe" 
+                        rows="4" 
+                        placeholder="e.g., black pants, red flannel shirt, white sneakers, denim jacket"
+                    ></textarea>
+                </div>
+
+                <button id="personalize-btn" class="btn-primary">Save & Personalize</button>
+
+                <div id="loader" class="loader hidden">
+                    <div class="spinner"></div>
+                    <p>Analyzing your style and wardrobe compatibility...</p>
+                </div>
+            </section>
+
+            <section class="products-section">
+                <h2>Product Recommendations</h2>
+                <div id="product-list-container" class="product-grid"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
